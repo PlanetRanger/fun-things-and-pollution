@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "fun-things-and-pollution",
+  "version": "${version}",
+  "name": "FunThingsAndPollution",
+  "description": "A fun mod to play",
+  "authors": [],
+  "contact": {},
+  "license": "unlicense",
+  "icon": "assets/funthingsandpollution/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.yooooo.funthingsandpollution.client.FunthingsandpollutionClient"
+    ],
+    "main": [
+      "org.yooooo.funthingsandpollution.Funthingsandpollution"
+    ]
+  },
+  "mixins": [
+    "funthingsandpollution.mixins.json",
+    {
+      "config": "funthingsandpollution.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
